@@ -1,0 +1,30 @@
+/* Admin styles */
+.sfh-admin-body { display:flex; min-height:100vh; background: var(--bg); }
+.sfh-sidebar { width: 260px; background: var(--surface); border-right:1px solid var(--border); padding: 22px 16px; position: sticky; top:0; height:100vh; }
+.sfh-sidebar-brand { display:flex; align-items:center; gap:10px; font-weight:800; padding: 6px 8px 22px; border-bottom:1px solid var(--border); margin-bottom:14px; color: var(--text); }
+.sfh-sidebar-brand i { color: var(--primary); font-size: 1.4rem; }
+.sfh-sidebar-nav { display:flex; flex-direction:column; gap:4px; }
+.sfh-sidebar-nav a { padding: 10px 14px; border-radius: 10px; color: var(--text); opacity:.85; display:flex; align-items:center; gap:10px; transition: var(--transition); }
+.sfh-sidebar-nav a:hover { background: var(--glass); opacity:1; }
+.sfh-sidebar-nav hr { border-color: var(--border); margin: 12px 0; }
+
+.sfh-admin-main { flex:1; padding: 24px 32px 60px; }
+.sfh-admin-header { display:flex; justify-content:space-between; align-items:center; margin-bottom: 22px; }
+.sfh-admin-header h1 { font-size: 1.4rem; font-weight:800; margin:0; }
+.sfh-admin-user { color: var(--text-muted); }
+.sfh-panel { background: var(--surface); border:1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+.sfh-stat { display:flex; align-items:center; gap:16px; padding: 18px 20px; background: var(--surface); border:1px solid var(--border); border-radius: var(--radius); }
+.sfh-stat i { width:48px; height:48px; border-radius:14px; display:grid; place-items:center; background: linear-gradient(135deg, var(--primary), var(--primary-2)); color:#fff; font-size:1.3rem; }
+.sfh-stat strong { font-size: 1.5rem; display:block; }
+.sfh-stat span { color: var(--text-muted); font-size:.85rem; }
+
+.table { color: var(--text); }
+.table > :not(caption) > * > * { background: transparent; color: var(--text); border-color: var(--border); }
+
+.sfh-theme-card { display:block; background: var(--surface-2); border:2px solid var(--border); border-radius: var(--radius); padding: 16px; cursor:pointer; transition: var(--transition); }
+.sfh-theme-card.is-active, .sfh-theme-card:has(input:checked) { border-color: var(--primary); }
+.sfh-theme-card input { display:none; }
+.sfh-theme-preview { display:flex; gap:6px; margin-bottom: 10px; }
+.sfh-theme-preview span { flex:1; height: 36px; border-radius: 8px; }
+
+@media (max-width: 900px) { .sfh-sidebar { display:none; } .sfh-admin-main { padding: 16px; } }
